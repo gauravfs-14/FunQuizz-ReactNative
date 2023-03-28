@@ -1,14 +1,17 @@
-import { ScrollView, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import React from "react";
 import QuestionCard from "./QuestionCard";
-import questions from "../data/questions";
+import { useContext } from "react";
+import { QuestionContext } from "../context/QuestionContext";
 
 const QuestionsList = () => {
+  const { data } = useContext(QuestionContext);
   return (
     <FlatList
-      data={questions}
+      data={data}
       renderItem={({ item }) => <QuestionCard qno={item.qno} />}
       keyExtractor={(item) => item.qno}
+      showsVerticalScrollIndicator={false}
     />
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { NativeBaseProvider, Heading, Box } from "native-base";
+import { Heading, Box, NativeBaseProvider } from "native-base";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import Welcome from "../components/Welcome";
@@ -14,6 +14,7 @@ export default function App() {
           headerStyle: { backgroundColor: "#000e21" },
           headerShadowVisible: false,
           headerTitleStyle: { color: "#f5f5f4" },
+          headerBackVisible: false,
         }}
       />
       <StatusBar style="inverted" />
